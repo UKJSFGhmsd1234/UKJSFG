@@ -93,7 +93,9 @@
   box-shadow: 0 0 14px rgba(240,165,0,.85);
   animation: statusPulse 2s infinite;
 }
-
+.status-amber {
+    color: #f0a500;
+}
 .status-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
