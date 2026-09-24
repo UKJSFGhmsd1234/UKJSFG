@@ -96,8 +96,19 @@
 
 .status-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 12px;
+}
+
+.status-item:nth-child(1),
+.status-item:nth-child(2),
+.status-item:nth-child(3) {
+  grid-column: span 2;
+}
+
+.status-item:nth-child(4),
+.status-item:nth-child(5) {
+  grid-column: span 3;
 }
 
 .status-item {
