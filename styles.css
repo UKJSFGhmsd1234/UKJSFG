@@ -44,16 +44,16 @@
   position: relative;
   margin-top: 32px;
   padding: 32px;
-  background: linear-gradient(135deg, #101714 0%, #0b0f0e 100%);
-  border: 1px solid #29352f;
-  border-left: 4px solid #56c878;
+  background: linear-gradient(135deg, #211b0f 0%, #100e09 100%);
+  border: 1px solid rgba(240, 165, 0, .35);
+  border-left: 4px solid #f0a500;
   box-shadow: 0 20px 50px rgba(0,0,0,.35);
 }
 
 .status-main {
   padding-bottom: 28px;
   margin-bottom: 25px;
-  border-bottom: 1px solid #29352f;
+  border-bottom: 1px solid rgba(240, 165, 0, .30);
 }
 
 .status-label {
@@ -88,9 +88,9 @@
   flex: 0 0 13px;
 }
 
-.status-dot.green {
-  background: #56c878;
-  box-shadow: 0 0 14px rgba(86,200,120,.8);
+.status-dot.amber {
+  background: #f0a500;
+  box-shadow: 0 0 14px rgba(240,165,0,.85);
   animation: statusPulse 2s infinite;
 }
 
