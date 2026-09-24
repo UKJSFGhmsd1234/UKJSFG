@@ -94,7 +94,7 @@
   animation: statusPulse 2s infinite;
 }
 .status-amber {
-    color: #f0a500;
+    color: #f0a500 !important;
 }
 .status-grid {
   display: grid;
