@@ -44,15 +44,16 @@
   position: relative;
   margin-top: 32px;
   padding: 32px;
- background: linear-gradient(135deg, #210f0f 0%, #100909 100%);
-border: 1px solid rgba(255, 43, 43, .35);
-border-left: 4px solid #ff2b2b;
-box-shadow: 0 20px 50px rgba(0,0,0,.35);
+  background: linear-gradient(135deg, #102116 0%, #09100c 100%);
+  border: 1px solid rgba(86, 200, 120, .35);
+  border-left: 4px solid #56c878;
+  box-shadow: 0 20px 50px rgba(0,0,0,.35);
+}
 
 .status-main {
   padding-bottom: 28px;
   margin-bottom: 25px;
- border-bottom: 1px solid rgba(255, 43, 43, .30);
+  border-bottom: 1px solid rgba(86, 200, 120, .30);
 }
 
 .status-label {
@@ -87,15 +88,16 @@ box-shadow: 0 20px 50px rgba(0,0,0,.35);
   flex: 0 0 13px;
 }
 
-.status-dot.red {
-    background: #ff2b2b;
-    box-shadow: 0 0 14px rgba(255,43,43,.85);
-    animation: statusPulse 2s infinite;
+.status-dot.green {
+  background: #56c878;
+  box-shadow: 0 0 14px rgba(86, 200, 120, .85);
+  animation: statusPulse 2s infinite;
 }
+
+.status-green {
+  color: #69dc89 !important;
 }
-.status-red {
-    color: #ff2b2b !important;
-}
+
 .status-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -150,12 +152,12 @@ box-shadow: 0 20px 50px rgba(0,0,0,.35);
 @keyframes statusPulse {
   0%, 100% {
     opacity: 1;
-    box-shadow: 0 0 8px rgba(255, 43, 43, .55);
+    box-shadow: 0 0 8px rgba(86, 200, 120, .55);
   }
 
   50% {
     opacity: .65;
-    box-shadow: 0 0 18px rgba(255, 43, 43, .9);
+    box-shadow: 0 0 18px rgba(86, 200, 120, .9);
   }
 }
 
