@@ -44,16 +44,16 @@
   position: relative;
   margin-top: 32px;
   padding: 32px;
-  background: linear-gradient(135deg, #210f0f 0%, #100909 100%);
-  border: 1px solid rgba(255, 43, 43, .35);
-  border-left: 4px solid #ff2b2b;
+  background: linear-gradient(135deg, #102119 0%, #09120e 100%);
+  border: 1px solid rgba(105, 220, 137, .35);
+  border-left: 4px solid #69dc89;
   box-shadow: 0 20px 50px rgba(0,0,0,.35);
 }
 
 .status-main {
   padding-bottom: 28px;
   margin-bottom: 25px;
-  border-bottom: 1px solid rgba(255, 43, 43, .30);
+  border-bottom: 1px solid rgba(105, 220, 137, .30);
 }
 
 .status-label {
@@ -61,7 +61,7 @@
   margin-bottom: 10px;
   font-size: 11px;
   letter-spacing: 2px;
-  color: #b47e7e;
+  color: #83b69a;
 }
 
 .status-main h3 {
@@ -76,7 +76,7 @@
 .status-main p {
   max-width: 750px;
   margin: 0;
-  color: #b09c9c;
+  color: #a4b9ad;
   line-height: 1.7;
 }
 
@@ -88,10 +88,15 @@
   flex: 0 0 13px;
 }
 
+.status-dot.green {
+  background: #69dc89;
+  box-shadow: 0 0 14px rgba(105, 220, 137, .85);
+  animation: statusPulse 2s infinite;
+}
+
 .status-dot.red {
   background: #ff3434;
   box-shadow: 0 0 14px rgba(255, 43, 43, .85);
-  animation: statusPulse 2s infinite;
 }
 
 .status-red {
@@ -125,21 +130,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #160e0e;
-  border: 1px solid #392323;
+  background: #0e1913;
+  border: 1px solid #294235;
   transition: transform .25s ease, border-color .25s ease, background .25s ease;
 }
 
 .status-item:hover {
   transform: translateY(-3px);
-  border-color: #ff4545;
-  background: #211212;
+  border-color: #69dc89;
+  background: #16271d;
 }
 
 .status-item span {
   font-size: 10px;
   letter-spacing: 1.5px;
-  color: #a18484;
+  color: #8ca997;
 }
 
 .status-item strong {
@@ -156,12 +161,12 @@
 @keyframes statusPulse {
   0%, 100% {
     opacity: 1;
-    box-shadow: 0 0 8px rgba(255, 43, 43, .55);
+    box-shadow: 0 0 8px rgba(105, 220, 137, .55);
   }
 
   50% {
     opacity: .65;
-    box-shadow: 0 0 18px rgba(255, 43, 43, .9);
+    box-shadow: 0 0 18px rgba(105, 220, 137, .9);
   }
 }
 /* FORCE STATUS - MOBILE */
