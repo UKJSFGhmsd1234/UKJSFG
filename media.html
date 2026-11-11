@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080b0d">
+<title>UKJSFG | Media Centre & Operations Archive</title>
+<meta name="description" content="UKJSFG Home Base media and historical operations archive from our Arma Reforger MilSim community.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.png?v=4">
+<link rel="stylesheet" href="media.css">
+<script src="media-data.js" defer></script>
+<script src="media.js" defer></script>
+</head>
+<body>
+<header class="nav">
+ <a class="brand" href="index.html#home"><span class="brand-mark">UK</span><span><b>UKJSFG</b><small>ARMA REFORGER MILSIM</small></span></a>
+ <button class="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+ <nav aria-label="Site navigation"><a href="index.html#about">ABOUT</a><a href="index.html#units">UNITS</a><a href="index.html#progression">PROGRESSION</a><a href="index.html#team">MEET THE TEAM</a><a href="media.html" class="active" aria-current="page">MEDIA</a></nav>
+ <a class="btn btn-red nav-join" href="https://discord.gg/pQaPmvWr3A" target="_blank" rel="noopener">JOIN UKJSFG</a>
+</header>
+<main>
+ <section class="masthead">
+  <span class="kicker">UKJSFG // MEDIA CENTRE</span>
+  <h1>THE UKJSFG ARCHIVE</h1>
+  <p>Home Base, training and community moments. Previous deployments, preserved in the operations archive.</p>
+  <div class="tab-bar" role="tablist" aria-label="Media sections">
+   <button class="tab active" id="tab-home" role="tab" aria-selected="true" aria-controls="panel-home" data-tab="home">⌂ &nbsp; HOME BASE</button>
+   <button class="tab" id="tab-ops" role="tab" aria-selected="false" aria-controls="panel-ops" data-tab="ops">▣ &nbsp; OPERATIONS ARCHIVE</button>
+  </div>
+ </section>
+ <section id="panel-home" class="page-section" role="tabpanel" aria-labelledby="tab-home">
+  <div class="section-heading"><div><span class="kicker">01 // AT HEADQUARTERS</span><h2>HOME BASE GALLERY</h2></div><span class="section-meta">TRAINING // PERSONNEL // COMMUNITY</span></div>
+  <p class="section-copy">Moments from around UKJSFG Home Base — from unit gatherings and formal occasions to aviation and training media.</p>
+  <div class="home-filters" aria-label="Gallery filters">
+   <button class="chip active" data-home-filter="all">ALL MEDIA</button>
+   <button class="chip" data-home-filter="aviation">AVIATION</button>
+   <button class="chip" data-home-filter="personnel">PERSONNEL</button>
+   <button class="chip" data-home-filter="ceremony">CEREMONIES</button>
+  </div>
+  <div id="home-gallery" class="home-gallery" aria-live="polite"></div>
+ </section>
+ <section id="panel-ops" class="page-section" role="tabpanel" aria-labelledby="tab-ops" hidden>
+  <div class="section-heading"><div><span class="kicker">02 // DEPLOYMENT RECORDS</span><h2>OPERATIONS ARCHIVE</h2></div><span class="section-meta">HISTORICAL DEPLOYMENTS</span></div>
+  <p class="section-copy">Browse UKJSFG deployments. Operation dates, participation and images will be added from verified UKJSFG records — no fabricated mission reports.</p>
+  <div class="op-controls"><label class="sr-only" for="op-search">Search deployments</label><input type="search" id="op-search" placeholder="Search operations or locations…"><label class="sr-only" for="op-location">Filter by location</label><select id="op-location"><option value="all">ALL LOCATIONS</option></select><button id="reset-filters" class="chip" type="button">RESET FILTERS</button></div>
+  <div class="ops-count" id="ops-count" aria-live="polite"></div>
+  <div class="ops-grid" id="operations-grid"></div>
+  <p class="archive-note">Future deployments can be added to <code>media-data.js</code>. Each new entry automatically creates a new archive card.</p>
+ </section>
+</main>
+<footer><div><b>UKJSFG</b><span>UK JOINT SPECIAL FORCES GROUP // ARMA REFORGER MILSIM</span></div><a href="index.html">RETURN TO HOME</a><small>Fan-made Arma Reforger MilSim community. Not an official UK Armed Forces website.</small></footer>
+<dialog id="lightbox" class="lightbox" aria-label="Image viewer"><button id="close-lightbox" class="close-lightbox" aria-label="Close image viewer">✕</button><button id="previous-image" class="lightbox-arrow" aria-label="Previous image">‹</button><figure><img id="lightbox-image" alt=""><figcaption id="lightbox-caption"></figcaption></figure><button id="next-image" class="lightbox-arrow" aria-label="Next image">›</button></dialog>
+</body>
+</html>
