@@ -29,8 +29,67 @@
 </section>
 <section id="units" class="section section-dark">
  <div class="section-head"><div><span class="kicker">02 // FIND YOUR PLACE</span><h2>CHOOSE YOUR UNIT</h2></div><span>SEVEN ELEMENTS. ONE GROUP.</span></div>
- <div class="unit-showcase"><img src="assets/unit-patches.jpg" alt="UKJSFG Tac Black unit insignia collection"><div class="unit-grid"><article><b>SAS</b><span>SPECIALIST GROUND ELEMENT</span></article><article><b>SBS</b><span>MARITIME SPECIALIST ELEMENT</span></article><article><b>SRR</b><span>RECONNAISSANCE ELEMENT</span></article><article><b>PARA</b><span>AIRBORNE INFANTRY</span></article><article><b>ROYAL MARINE COMMANDOS</b><span>COMMANDO INFANTRY</span></article><article><b>RAF REGIMENT</b><span>GROUND COMBAT & FORCE PROTECTION</span></article><article><b>658 SQDN — FLIGHT</b><span>AVIATION ELEMENT</span></article></div></div>
- <p class="privacy-note">Public unit information is recruitment-focused. Operational planning and internal mission information remain within UKJSFG.</p>
+
+<div class="unit-showcase">
+  <img src="assets/unit-patches.jpg" alt="UKJSFG Tac Black unit insignia collection">
+
+  <div class="unit-grid">
+    <article>
+      <a href="#unit-sas" class="unit-link">
+        <b>SAS</b>
+        <span>SPECIALIST GROUND ELEMENT</span>
+      </a>
+    </article>
+
+    <article>
+      <a href="#unit-sbs" class="unit-link">
+        <b>SBS</b>
+        <span>MARITIME SPECIALIST ELEMENT</span>
+      </a>
+    </article>
+
+    <article>
+      <a href="#unit-srr" class="unit-link">
+        <b>SRR</b>
+        <span>RECONNAISSANCE ELEMENT</span>
+      </a>
+    </article>
+
+    <article>
+      <a href="#unit-para" class="unit-link">
+        <b>PARA</b>
+        <span>AIRBORNE INFANTRY</span>
+      </a>
+    </article>
+
+    <article>
+      <a href="#unit-marines" class="unit-link">
+        <b>ROYAL MARINE COMMANDOS</b>
+        <span>COMMANDO INFANTRY</span>
+      </a>
+    </article>
+
+    <article>
+      <a href="#unit-raf" class="unit-link">
+        <b>RAF REGIMENT</b>
+        <span>GROUND COMBAT & FORCE PROTECTION</span>
+      </a>
+    </article>
+
+    <article>
+      <a href="#unit-flight" class="unit-link">
+        <b>658 SQDN — FLIGHT</b>
+        <span>AVIATION ELEMENT</span>
+      </a>
+    </article>
+  </div>
+</div>
+
+<p class="privacy-note">
+  Public unit information is recruitment-focused.
+  Operational planning and internal mission information remain within UKJSFG.
+</p>
+
 </section>
 <section id="progression" class="section progression">
  <div class="section-head"><div><span class="kicker">03 // DEVELOPMENT</span><h2>TRAIN. PROGRESS. SPECIALISE.</h2></div><span>BUILD YOUR PLACE IN THE GROUP.</span></div>
@@ -130,4 +189,32 @@
 </a>
 <div><b>UKJSFG</b><span>UK JOINT SPECIAL FORCES GROUP // ARMA REFORGER MILSIM</span></div><div class="footer-links"><a href="#about">ABOUT</a><a href="#units">UNITS</a><a href="#team">TEAM</a><a href="#join">JOIN</a></div><small>Fan-made Arma Reforger MilSim community. Not an official UK Armed Forces website.</small>
 </footer><script src="script.js"></script>
-</body></html>
+
+<!-- UKJSFG UNIT INFORMATION POP-UP -->
+<dialog id="unit-modal" class="unit-modal">
+  <div class="unit-modal-content">
+    <button type="button" class="unit-modal-close"
+            aria-label="Close unit profile">✕</button>
+
+    <span class="kicker">UKJSFG // UNIT PROFILE</span>
+
+    <h2 id="unit-modal-title"></h2>
+
+    <p id="unit-modal-description"></p>
+
+    <h3>PRIMARY RESPONSIBILITIES</h3>
+    <ul id="unit-modal-duties"></ul>
+
+    <h3>SPECIALIST ROLES</h3>
+    <p id="unit-modal-roles"></p>
+
+    <p class="unit-modal-note">
+      Training requirements and role availability
+      are confirmed by UKJSFG command.
+    </p>
+  </div>
+</dialog>
+<!-- END UNIT INFORMATION POP-UP -->
+
+</body>
+</html>
