@@ -299,4 +299,32 @@
 }
 
 
+/* =========================================
+   UKJSFG — CLICKABLE SPECIALIST ROLES
+   ========================================= */
 
+.role-tags .role-link {
+  display: inline-block;
+  border: 1px solid #3a4446;
+  padding: 11px 13px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #edf0ef;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.role-tags .role-link:hover {
+  border-color: #b6222b;
+  background: #151b1e;
+  color: #ff4545;
+  transform: translateY(-2px);
+}
+
+.role-tags .role-link:focus-visible {
+  outline: 2px solid #b6222b;
+  outline-offset: 3px;
+}
