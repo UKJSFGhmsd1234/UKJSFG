@@ -153,3 +153,171 @@ unitModal?.addEventListener("click", event => {
     unitModal.close();
   }
 });
+
+
+
+/* =========================================
+   UKJSFG — SPECIALIST ROLE PROFILES
+   ========================================= */
+
+const roleProfiles = {
+  "role-rifleman": {
+    title: "RIFLEMAN",
+    description: "The backbone of UKJSFG ground operations. Riflemen work as part of a team to complete objectives and support their section.",
+    duties: [
+      "General infantry duties",
+      "Team movement and communication",
+      "Objective security",
+      "Supporting specialist personnel"
+    ],
+    training: "Basic infantry training, communications and weapons familiarisation."
+  },
+
+  "role-medic": {
+    title: "COMBAT MEDIC",
+    description: "Responsible for providing medical support and treating simulated casualties during UKJSFG operations.",
+    duties: [
+      "Treating wounded personnel in-game",
+      "Casualty assessment",
+      "Medical equipment management",
+      "Coordinating casualty evacuation"
+    ],
+    training: "Team Medic ACMT and medical system familiarisation."
+  },
+
+  "role-recce": {
+    title: "RECONNAISSANCE SPECIALIST",
+    description: "Specialises in gathering intelligence, observing enemy activity and providing information to command.",
+    duties: [
+      "Reconnaissance patrols",
+      "Observation and surveillance",
+      "Intelligence reporting",
+      "Target identification"
+    ],
+    training: "Reconnaissance, navigation and communications training."
+  },
+
+  "role-eod": {
+    title: "ENGINEER / EOD",
+    description: "Provides specialist engineering and explosive ordnance capabilities during simulated operations.",
+    duties: [
+      "In-game explosive hazard identification",
+      "Engineering support",
+      "Demolitions scenarios",
+      "Equipment management"
+    ],
+    training: "Specialist engineering and EOD familiarisation."
+  },
+
+  "role-at": {
+    title: "ANTI-TANK SPECIALIST",
+    description: "Provides the section with specialist anti-vehicle capabilities during operations.",
+    duties: [
+      "Anti-vehicle support",
+      "Equipment preparation",
+      "Threat identification",
+      "Coordination with section command"
+    ],
+    training: "Anti-tank equipment familiarisation."
+  },
+
+  "role-gunner": {
+    title: "MACHINE GUNNER",
+    description: "Provides supporting fire capabilities to assist team movement and objective security.",
+    duties: [
+      "Supporting-fire duties",
+      "Weapon and ammunition management",
+      "Squad coordination",
+      "Defensive support"
+    ],
+    training: "Machine-gun familiarisation and supporting-fire training."
+  },
+
+  "role-pilot": {
+    title: "PILOT",
+    description: "Responsible for operating UKJSFG aircraft during transport, reconnaissance and support missions.",
+    duties: [
+      "Aircraft operation",
+      "Troop insertion and extraction",
+      "Flight navigation",
+      "Air-to-ground communication"
+    ],
+    training: "Flight assessment and aircraft familiarisation."
+  },
+
+  "role-copilot": {
+    title: "CO-PILOT",
+    description: "Supports the pilot with navigation, communications and aircraft coordination.",
+    duties: [
+      "Navigation assistance",
+      "Flight communications",
+      "Aircraft systems support",
+      "Crew coordination"
+    ],
+    training: "Flight familiarisation and crew coordination."
+  },
+
+  "role-sniper": {
+    title: "SNIPER",
+    description: "A specialist observation and precision marksmanship role supporting UKJSFG operations.",
+    duties: [
+      "Long-range observation",
+      "Intelligence reporting",
+      "Precision marksmanship scenarios",
+      "Reconnaissance support"
+    ],
+    training: "Marksman ACMT and specialist sniper assessment."
+  }
+};
+
+// Reuse the existing UKJSFG pop-up panel
+document.querySelectorAll(".role-link").forEach(link => {
+  link.addEventListener("click", event => {
+    event.preventDefault();
+
+    const roleId = link.getAttribute("href").substring(1);
+    const role = roleProfiles[roleId];
+
+    if (!role || !unitModal) return;
+
+    document.querySelector("#unit-modal .kicker")
+      .textContent = "UKJSFG // SPECIALIST ROLE";
+
+    document.getElementById("unit-modal-title")
+      .textContent = role.title;
+
+    document.getElementById("unit-modal-description")
+      .textContent = role.description;
+
+    const duties = document.getElementById("unit-modal-duties");
+    duties.replaceChildren();
+
+    role.duties.forEach(duty => {
+      const item = document.createElement("li");
+      item.textContent = duty;
+      duties.appendChild(item);
+    });
+
+    document.getElementById("unit-modal-roles")
+      .textContent = role.training;
+
+    document.querySelector("#unit-modal h3")
+      .textContent = "PRIMARY RESPONSIBILITIES";
+
+    document.querySelectorAll("#unit-modal h3")[1]
+      .textContent = "TRAINING & QUALIFICATIONS";
+
+    unitModal.showModal();
+  });
+});
+
+// Restore unit-specific headings when opening unit profiles
+document.querySelectorAll(".unit-link").forEach(link => {
+  link.addEventListener("click", () => {
+    document.querySelector("#unit-modal .kicker")
+      .textContent = "UKJSFG // UNIT PROFILE";
+
+    document.querySelectorAll("#unit-modal h3")[1]
+      .textContent = "SPECIALIST ROLES";
+  });
+});
