@@ -14,7 +14,7 @@
 <header class="nav">
  <a class="brand" href="#home"><span class="brand-mark">UK</span><span><b>UKJSFG</b><small>ARMA REFORGER MILSIM</small></span></a>
  <button class="menu" aria-label="Open navigation">☰</button>
- <nav><a href="#about">ABOUT</a><a href="#units">UNITS</a><a href="#progression">PROGRESSION</a><a href="#team">MEET THE TEAM</a><a href="roster.html">TROOP ROSTER</a><a href="media.html">MEDIA</a></nav>
+ <nav><a href="#about">ABOUT</a><a href="#units">UNITS</a><a href="#progression">PROGRESSION</a><a href="#team">MEET THE TEAM</a><a href="media/">MEDIA</a></nav>
  <a class="btn btn-red nav-join" href="https://discord.gg/pQaPmvWr3A" target="_blank" rel="noopener">JOIN UKJSFG</a>
 </header>
 <main>
@@ -109,8 +109,8 @@
 </section>
 <section id="team" class="section section-dark">
  <div class="section-head"><div><span class="kicker">04 // THE PEOPLE BEHIND UKJSFG</span><h2>MEET THE TEAM</h2></div><span>COMMAND & ADMINISTRATION</span></div>
- <div class="senior-row"><article class="personnel-card"><img src="assets/grae.jpg" alt="Grae"><div><small>OWNER / ADMIN // SBS</small><h3>2LT GRAE</h3><span>SECOND LIEUTENANT</span></div></article><article class="personnel-card"><img src="assets/hylandar.jpg" alt="Hylandar"><div><small>CO-OWNER / ADMIN // SFSG</small><h3>RSM HYLANDAR</h3><span>REGIMENTAL SERGEANT MAJOR</span></div></article></div>
- <div class="team-row"><article class="personnel-card"><img src="assets/fubzy.jpg" alt="Fubzy"><div><small>ADMIN // SBS</small><h3>CSGT FUBZY</h3><span>COLOUR SERGEANT</span></div></article><article class="personnel-card"><img src="assets/kyles.jpg" alt="Kyles"><div><small>ADMIN // SRR</small><h3>CSGT KYLES</h3><span>COLOUR SERGEANT</span></div></article><article class="personnel-card"><img src="assets/menzy.jpg" alt="Menzy"><div><small>WEB DEV / ADMIN // SAS</small><h3>SGT MENZY</h3><span>SERGEANT</span></div></article></div>
+ <div class="senior-row"><article class="personnel-card personnel-open" role="button" tabindex="0" aria-label="Open Grae personnel dossier" data-personnel="grae"><img src="assets/grae.jpg" alt="Grae"><div><small>OWNER / ADMIN // SBS</small><h3>2LT GRAE</h3><span>SECOND LIEUTENANT</span></div></article><article class="personnel-card personnel-open" role="button" tabindex="0" aria-label="Open Hylandar personnel dossier" data-personnel="hylandar"><img src="assets/hylandar.jpg" alt="Hylandar"><div><small>CO-OWNER / ADMIN // SFSG</small><h3>RSM HYLANDAR</h3><span>REGIMENTAL SERGEANT MAJOR</span></div></article></div>
+ <div class="team-row"><article class="personnel-card personnel-open" role="button" tabindex="0" aria-label="Open Fubzy personnel dossier" data-personnel="fubzy"><img src="assets/fubzy.jpg" alt="Fubzy"><div><small>ADMIN // SBS</small><h3>CSGT FUBZY</h3><span>COLOUR SERGEANT</span></div></article><article class="personnel-card personnel-open" role="button" tabindex="0" aria-label="Open Kyles personnel dossier" data-personnel="kyles"><img src="assets/kyles.jpg" alt="Kyles"><div><small>ADMIN // SRR</small><h3>CSGT KYLES</h3><span>COLOUR SERGEANT</span></div></article><article class="personnel-card personnel-open" role="button" tabindex="0" aria-label="Open Menzy personnel dossier" data-personnel="menzy"><img src="assets/menzy.jpg" alt="Menzy"><div><small>WEB DEV / ADMIN // SAS</small><h3>SGT MENZY</h3><span>SERGEANT</span></div></article></div>
 </section>
 <section id="media" class="section media">
  <div class="section-head"><div><span class="kicker">05 // SEE THE GROUP</span><h2>UKJSFG IN ACTION</h2></div><span>COMMUNITY. TRAINING. GAMEPLAY.</span></div>
@@ -227,6 +227,27 @@
   </div>
 </dialog>
 <!-- END UNIT INFORMATION POP-UP -->
+
+
+<!-- PERSONNEL DOSSIERS: independently expandable, no changes to existing unit modal -->
+<dialog id="personnel-modal" class="personnel-modal" aria-labelledby="personnel-title">
+  <div class="personnel-modal-inner">
+    <button type="button" class="personnel-modal-close" aria-label="Close personnel dossier">✕</button>
+    <div class="personnel-hero">
+      <img id="personnel-photo" src="" alt="">
+      <div><span class="personnel-kicker">UKJSFG // COMMAND PERSONNEL FILE</span><h2 id="personnel-title"></h2><p id="personnel-subtitle"></p><span class="personnel-status">● ACTIVE PERSONNEL</span></div>
+    </div>
+    <div class="personnel-info" id="personnel-info"></div>
+    <section class="personnel-section"><h3>01 // ABOUT</h3><div id="personnel-bio"></div></section>
+    <section class="personnel-section"><h3>02 // SPECIALIST ROLES</h3><div id="personnel-roles" class="personnel-tags"></div></section>
+    <section class="personnel-section"><h3>03 // QUALIFICATIONS</h3><div id="personnel-qualifications" class="personnel-tags"></div></section>
+    <section class="personnel-section" id="personnel-aviation-section" hidden><h3>04 // AVIATION QUALIFICATIONS</h3><div id="personnel-aviation" class="personnel-tags"></div></section>
+    <section class="personnel-section"><details class="personnel-awards"><summary>DECORATIONS & RECOGNITION <span>VIEW AWARDS ▾</span></summary><div id="personnel-awards" class="personnel-tags personnel-medals"></div></details></section>
+    <p class="personnel-footnote">UKJSFG community personnel records. Qualifications and recognition are updated independently of biographies.</p>
+  </div>
+</dialog>
+<link rel="stylesheet" href="personnel.css">
+<script src="personnel.js" defer></script>
 
 <script src="script.js"></script>
 </body>
