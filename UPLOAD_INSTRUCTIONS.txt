@@ -1,0 +1,7 @@
+UKJSFG development branch update - compact package
+
+This is NOT a complete website backup. It contains only changed/new files.
+Upload the files and media folder contents into the ROOT of your existing UKJSFG repository branch. Do not delete existing assets, styles.css, script.js or media CSS/JS/data files.
+Replace index.html and media.html when prompted.
+Ensure media/index.html ends up inside the media folder.
+Keep main untouched until tested.

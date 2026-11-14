@@ -1,0 +1,24 @@
+/* UKJSFG personnel dossiers - scoped to avoid changing other components */
+.personnel-open{cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+.personnel-open:hover,.personnel-open:focus-visible{transform:translateY(-3px);box-shadow:0 0 0 2px #7a9b77;outline:none}
+.personnel-modal{max-width:min(850px,94vw);width:94vw;max-height:90vh;border:1px solid #455b4a;background:#101613;color:#e7ece8;padding:0;border-radius:14px;box-shadow:0 24px 90px #000b}
+.personnel-modal::backdrop{background:rgba(0,0,0,.82);backdrop-filter:blur(4px)}
+.personnel-modal-inner{position:relative;padding:clamp(18px,4vw,35px);overflow-y:auto;max-height:90vh}
+.personnel-modal-close{position:absolute;right:16px;top:13px;color:#fff;background:#26372b;border:1px solid #66836a;border-radius:5px;cursor:pointer;padding:8px 12px;font-size:18px;z-index:2}
+.personnel-hero{display:grid;grid-template-columns:160px 1fr;align-items:center;gap:25px;padding-bottom:22px;border-bottom:1px solid #3b5140}
+.personnel-hero img{width:160px;height:190px;object-fit:cover;border-radius:8px;border:1px solid #536758}
+.personnel-kicker,.personnel-info small{font-size:11px;letter-spacing:.14em;color:#a6bea8}
+.personnel-hero h2{font-size:clamp(28px,5vw,46px);margin:10px 0;color:#fff;line-height:1.1}
+.personnel-hero p{color:#d0dcd1;margin:0 0 14px}
+.personnel-status{display:inline-block;color:#9ada9c;font-size:12px;letter-spacing:.1em}
+.personnel-info{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:24px 0}
+.personnel-info>div{background:#1d2921;border:1px solid #374a3c;padding:12px;border-radius:6px;min-width:0}
+.personnel-info small{display:block;margin-bottom:6px}.personnel-info strong{display:block;color:#f3f7f3;overflow-wrap:anywhere;font-size:14px}
+.personnel-section{padding:20px 0;border-top:1px solid #324336}.personnel-section h3{font-size:14px;letter-spacing:.13em;color:#b3cfb6;margin:0 0 16px}
+.personnel-section p{font-size:14px;line-height:1.75;color:#d7e0d8;margin:0 0 13px}
+.personnel-tags{display:flex;flex-wrap:wrap;gap:9px}.personnel-tag{background:#27382c;border:1px solid #45634b;border-radius:5px;padding:8px 11px;font-size:13px;color:#e6eee7}
+.personnel-tag.medal{background:#332f23;border-color:#88734c;color:#ead9a4}
+.personnel-awards summary{list-style:none;cursor:pointer;font-size:14px;font-weight:700;letter-spacing:.1em;color:#b3cfb6;display:flex;justify-content:space-between;gap:12px}.personnel-awards summary::-webkit-details-marker{display:none}
+.personnel-awards summary span{font-size:11px;color:#b8c4b9}.personnel-awards .personnel-tags{margin-top:20px}
+.personnel-footnote{font-size:11px;color:#96aa99;margin:10px 0}
+@media(max-width:560px){.personnel-hero{grid-template-columns:100px 1fr;gap:15px}.personnel-hero img{width:100px;height:130px}.personnel-info{grid-template-columns:1fr}.personnel-modal-inner{padding:18px}.personnel-hero h2{font-size:28px}.personnel-kicker{font-size:9px}}
