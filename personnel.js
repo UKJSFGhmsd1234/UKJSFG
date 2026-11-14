@@ -197,7 +197,16 @@ const UKJSFG_PERSONNEL = {
       "Team Medic ACMT"
     ],
     "aviation": [],
-    "awards": []
+    "awards": [
+      "3 Month CGB",
+      "6 Month CGB",
+      "9 Month CGB",
+      "Mention in Dispatches — Gogland",
+      "Gogland OSM",
+      "Afghanistan Medal",
+      "Egypt Defence Medal",
+      "Ukraine Defence Medal"
+    ]
   }
 };
 (() => {
